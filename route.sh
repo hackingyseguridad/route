@@ -1,4 +1,5 @@
 #!/bin/bash
+# para cambiar la  metrica de los interfaces comando ifmetric
 echo 
 echo "Ruta ..."
 echo 
