@@ -12,9 +12,9 @@ ip route list
 
 #
 # www.hackingyseguridad.com
-#
+
 # Comandos:
-#
+
 # Ver los dispositivos e IP
 
 ifconfig
