@@ -1,8 +1,20 @@
 # route
-establecer ruta con otras redes en linux
+
+Establece ruta con otras redes en linux
+
+ip route show
+
+sudo route add -net 172.16.0.0/12 gw 192.168.1.1 dev eth0
+
+sudo route add -net 10.0.0.0/8 gw 192.168.1.1 dev eth0
+
+ip route list
+
 #
 # www.hackingyseguridad.com
 
+# Comandos:
+#
 # Show network devices
 ifconfig
 
