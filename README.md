@@ -1,4 +1,4 @@
-<img width="150" height="150" style="float:left" alt="route logo" src="https://github.com/hackingyseguridad/route/blob/master/route.png"> 
+<img width="800" height="400" style="float:left" alt="route logo" src="https://github.com/hackingyseguridad/route/blob/master/route.png"> 
 
 
 # route
