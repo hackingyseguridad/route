@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#Asignar otros direccionamientos mismo interface fisico
 ip addr add 10.0.0.1/8 dev eth0 label eth0:1
 ip addr add 172.16.0.1/12 dev eth0 label eth0:2
 
