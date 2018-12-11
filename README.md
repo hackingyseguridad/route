@@ -110,6 +110,12 @@ route add -net 192.168.4.0/24 gw 192.168.4.1
 
 ip route add 192.168.4.0/24 via 192.168.4.1
 
+# Ver la tabla ARP Cache
+
+ip neighbor show
+
+ip neighbor show dev eth0
+
 # Explorar activos por ARP
 
 netdiscover
