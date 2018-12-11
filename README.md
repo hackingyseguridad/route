@@ -30,6 +30,8 @@ ip link show
 
 ip addr add 10.1.1.2/16 dev eth1
 
+ip addr list
+
 ip link set eth1 up
 
 # Activar un interface de red
