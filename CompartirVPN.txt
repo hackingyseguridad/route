@@ -1,0 +1,17 @@
+Compartir interface VPN tun0 con otra red.
+#
+# A ------ B
+# A el trafico de la red lo enrutamos a B
+#
+ip r a 192.168.1.0/24 via 192.168.1.252 dev eth0
+#
+# En B configuramos IP forwarding
+#
+sysctl net.ipv4.conf.all.forwarding=1
+#
+# Editamos /etc/sysctl.conf  net.ipv4.conf.all.forwarding = 1
+#
+iptables -L FORWARD -nv
+#
+iptables -t nat -I POSTROUTING -o tun0 -j MASQUERADE
+#
