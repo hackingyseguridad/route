@@ -15,5 +15,6 @@ sysctl net.ipv4.conf.all.forwarding=1
 #
 iptables -L FORWARD -nv
 #
+# NAT
 iptables -t nat -I POSTROUTING -o tun0 -j MASQUERADE
 #
