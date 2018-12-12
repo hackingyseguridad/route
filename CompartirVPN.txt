@@ -1,10 +1,12 @@
 Compartir interface VPN tun0 con otra red.
 #
+# ENRUTAMIENTO
 # A ------ B
 # A el trafico de la red lo enrutamos a B
 #
 ip r a 192.168.1.0/24 via 192.168.1.252 dev eth0
-#
+# 
+# REENVIO
 # En B configuramos IP forwarding
 #
 sysctl net.ipv4.conf.all.forwarding=1
