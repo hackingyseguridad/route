@@ -7,7 +7,7 @@ default via 192.168.1.1 dev eth0 onlink
 default via 192.168.1.1 dev eth1 proto dhcp metric 100
 192.168.1.0/24 dev eth0 proto kernel scope link src 192.168.1.200
 192.168.2.0/24 dev eth1 proto kernel scope link src 192.168.2.76 metric 100
-10.0.0.0/8 dev eth2 proto kernel scope link src 10.0.25.100 metric 200
+10.0.0.0/8 dev eth2 proto kernel scope link src 10.0.25.10 metric 200
 
 2º.- añadimos como gateway la IP que tenemos asignada por el DHCP o estatica en el Eth2
 
