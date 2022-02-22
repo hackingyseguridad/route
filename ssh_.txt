@@ -1,5 +1,5 @@
 Conectar con ssh a traves de un especifico interface ethernet NIC como por ej, eth2. 
-(Por defecto ahora el gateway es el iface Eth0 )
+(Por defecto ahora el gateway de SSH es el iface eth0. - hay 3 interfaces ethernet, con distintas metricas!)
 
 1º.- vemos la IP que tenemos asignada en el interface Eth2
 #ip route list
@@ -10,5 +10,7 @@ default via 192.168.1.1 dev eth1 proto dhcp metric 100
 10.0.0.0/8 dev eth2 proto kernel scope link src 10.0.25.100 metric 200
 
 2º.- añadimos como gateway la IP que tenemos asignada por el DHCP o estatica en el Eth2
+
 #sudo route add default gw 10.0.25.10 dev eth2
-##ssh -b 10.0.25.10 admin@10.0.0.1
+
+#ssh -b 10.0.25.10 admin@10.0.0.1
