@@ -10,13 +10,18 @@ iface lo inet loopback
 # Interfaces Ethernet0 con IP estataticas configuradas
 auto eth0
 iface eth0 inet static
-up ifmetric eth0 300
+up ifmetric eth0 0
 address 192.168.1.200
 netmask 255.255.255.0
 gateway 192.168.1.1
 dns-nameservers 194.179.1.100
 
-# Interfaces Ethernet2 en modo DHCP y menor metrica
+# Interfaces Ethernet2 en modo DHCP y  metrica
+allow-hotplug eth1
+iface eth1 inet dhcp
+up ifmetic eth1 100
+
+# Interfaces Ethernet2 en modo DHCP y  metrica
 auto eth2
 iface eth2 inet dhcp
 up ifmetric eth2 200
