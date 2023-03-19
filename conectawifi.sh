@@ -1,4 +1,4 @@
-
+#!/bin/bash
 iwconfig
 ifconfig
 ifconfig wlan0 up
