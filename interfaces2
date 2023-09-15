@@ -25,3 +25,10 @@ auto eth1.6
 iface eth1.6 inet static
 address 172.16.0.1
 network 255.240.0.0
+
+# Interface Wkan0 en modo DHCP con las credencciales
+
+auto wlan0
+iface wlan0 inet dhcp
+wpa-ssid hacking2
+wpa-psk Password999
