@@ -13,3 +13,4 @@ sudo dhclient eth1
 sudo dhclient eth2
 sudo dhclient eth3
 echo "-----------------------------"
+sudo systemctl restart networking
