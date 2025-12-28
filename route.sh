@@ -1,5 +1,9 @@
 #!/bin/bash
-# para cambiar la  metrica de los interfaces comando ifmetric
+
+# simple script en bash shell para cambiar la  metrica de los interfaces comando ifmetric
+# ip route show scope host table all
+# @antonio_taboada
+
 echo 
 echo "Ruta ..."
 echo 
