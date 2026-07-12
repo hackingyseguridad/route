@@ -1,143 +1,4 @@
-<img width="800" height="400" style="float:left" alt="route logo" src="https://github.com/hackingyseguridad/route/blob/master/route.png"> 
-
-
-# route
-
-# Establece ruta con otras redes en linux
-
-ip route show
-
-sudo route add -net 172.16.0.0/12 gw 192.168.1.1 dev eth0
-
-sudo route add -net 10.0.0.0/8 gw 192.168.1.1 dev eth0
-
-ip route list
-
-#
-# www.hackingyseguridad.com
-
-# Comandos:
-
-# Ver los dispositivos e IP
-
-ifconfig
-
-ip addr show
-
-ip link show
-
-# Establecer IP a un interface
-
-ip addr add 10.1.1.2/16 dev eth1
-
-ip addr list
-
-ip link set eth1 up
-
-# Activar un interface de red
-
-ifconfig eth0 up
-
-ip link set eth0 up
-
-# Desactivar un interface de red:
-
-ifconfig eth0 down
-
-ip link set eth0 down
-
-Setting IP address
-
-# La version simple:
-
-ifconfig eth0 192.168.0.77
-
-ip address add 192.168.0.77 dev eth0
-
-# La versión completa:
-
-ifconfig eth0 192.168.0.77 netmask 255.255.255.0 broadcast 192.168.0.255
-
-ip addr add 192.168.0.77/24 broadcast 192.168.0.255 dev eth0
-
-# Borrar una IP:
-
-ip addr del 192.168.0.77/24 dev eth0
-
-# Incluir alias interface
-
-ifconfig eth0:1 10.0.0.1/8
-
-ip addr add 10.0.0.1/8 dev eth0 label eth0:1
-
-# Incluir una entrada en al tabla de rutas
-
-arp -i eth0 -s 192.168.0.1 00:11:22:33:44:55
-
-ip neigh add 192.168.0.1 lladdr 00:11:22:33:44:55 nud permanent dev eth0
-
-# Establecer resolución ARP a un dispositivo
-
-ifconfig -arp eth0
-
-ip link set dev eth0 arp off
-
-# Ver la table de rutas
-
-route
-
-ip route show
-
-# With ip you can query on which interface a packet to a given IP address would be routed to:
-
-ip route get 192.168.88.77
-
-# Cambiando la tabla de rutas:
-
-route add -net 192.168.3.0/24 dev eth3
-
-ip route add 192.168.3.0/24 dev eth3
-
-# Borrar entradas de la tabla de rutas:
-
-route del -net 192.168.3.0/24 dev eth3
-
-ip route del 192.168.3.0/24 dev eth3
-
-# Establecer ruta:
-
-route add -net 192.168.4.0/24 gw 192.168.4.1
-
-ip route add 192.168.4.0/24 via 192.168.4.1
-
-# Ver la tabla ARP Cache
-
-ip neighbor show
-
-ip neighbor show dev eth0
-
-# Explorar activos por ARP
-
-netdiscover
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# route — Añadir ruta a otras redes en Linux
+### route — Añadir ruta a otras redes en Linux
 
 ![Shell](https://img.shields.io/badge/Shell-100%25-89e051)
 ![Platform](https://img.shields.io/badge/plataforma-Linux%20%2F%20Debian-blue)
@@ -148,11 +9,9 @@ Mantenido por [hackingyseguridad.com](http://www.hackingyseguridad.com/) (Antoni
 
 ![route logo](https://github.com/hackingyseguridad/route/raw/master/route.png)
 
-> ⚠️ **Aviso:** varios scripts modifican la configuración de red del sistema (rutas, interfaces, reglas de firewall, IP forwarding) y requieren privilegios de **root/sudo**. Revísalos antes de ejecutarlos y adáptalos a tu entorno (nombres de interfaz, IPs, gateways) — muchos de los valores están **hardcodeados** como ejemplo (`eth0`, `192.168.1.1`, etc.).
-
 ---
 
-## Tabla de contenidos
+### Tabla de contenidos
 
 - [¿Qué hace este repositorio?](#qué-hace-este-repositorio)
 - [Requisitos previos](#requisitos-previos)
@@ -180,7 +39,7 @@ Mantenido por [hackingyseguridad.com](http://www.hackingyseguridad.com/) (Antoni
 
 ---
 
-## ¿Qué hace este repositorio?
+### ¿Qué hace este repositorio?
 
 El repositorio agrupa scripts sueltos —sin instalador ni dependencias externas— que cubren el ciclo de vida habitual de la configuración de red en un servidor o equipo Linux (especialmente Debian/Ubuntu):
 
@@ -194,7 +53,7 @@ El repositorio agrupa scripts sueltos —sin instalador ni dependencias externas
 
 ---
 
-## Requisitos previos
+### Requisitos previos
 
 | Herramienta | Función | Instalación (Debian/Ubuntu) |
 |---|---|---|
@@ -210,7 +69,7 @@ El repositorio agrupa scripts sueltos —sin instalador ni dependencias externas
 
 ---
 
-## Estructura del repositorio
+### Estructura del repositorio
 
 ```
 route/
