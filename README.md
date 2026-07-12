@@ -39,7 +39,7 @@ Mantenido por [hackingyseguridad.com](http://www.hackingyseguridad.com/) (Antoni
 
 ---
 
-### ¿Qué hace este repositorio?
+### route
 
 El repositorio agrupa scripts sueltos —sin instalador ni dependencias externas— que cubren el ciclo de vida habitual de la configuración de red en un servidor o equipo Linux (especialmente Debian/Ubuntu):
 
