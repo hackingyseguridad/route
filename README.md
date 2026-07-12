@@ -291,7 +291,7 @@ sudo sh conectawifi.sh
 | 6 | `dhclient wlan0` | Solicitar IP por DHCP |
 | 7 | `iwconfig wlan0` | Confirmar el estado final de la conexión |
 
-> ⚠️ El SSID (`hackingyseguridad`) y la contraseña (`12345`) están **hardcodeados como ejemplo** — sustitúyelos por los de tu propia red antes de ejecutar.
+> El SSID (`hackingyseguridad`) y la contraseña (`12345`) están **hardcodeados como ejemplo** — sustitúyelos por los de tu propia red antes de ejecutar.
 
 ---
 
