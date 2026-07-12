@@ -407,27 +407,14 @@ El `README.md` original del repositorio no describe los scripts, sino que funcio
 
 ---
 
-## Preguntas frecuentes
-
-**¿Los scripts funcionan igual en cualquier distribución Linux?**
-Están escritos y probados sobre **Debian/Ubuntu** (usan `ifupdown`, `systemctl`/`service networking`, `apt`, etc.). En distribuciones con `NetworkManager` como único gestor, o en distros basadas en `systemd-networkd` (algunas configuraciones de Arch, Fedora con NetworkManager), algunos comandos (`ifdown --all`, `/etc/init.d/networking`) pueden no existir y habrá que adaptarlos.
-
-**¿Necesito privilegios de root para todos los scripts?**
-No. Los scripts de solo **diagnóstico/lectura** (`verinterfaces.sh`, `verrutas.sh`, `vecinos.sh`) no modifican nada y pueden ejecutarse sin `sudo`. Todo lo que añade rutas, IPs, sube/baja interfaces o reinicia servicios sí requiere privilegios elevados.
-
-**¿Por qué hay valores como `eth0`, `192.168.1.1` o SSID/contraseñas de ejemplo dentro de los scripts?**
-Porque están pensados como **plantillas de referencia rápida** más que como herramientas genéricas parametrizadas por argumentos. Antes de ejecutarlos, revisa y adapta los valores a tu red real.
-
-**¿`traceroute.sh` envía tráfico a algún servidor externo?**
-Por defecto traza la ruta hacia `hackingyseguridad.com:443` mediante TCP; puedes (y probablemente debas) cambiar la variable `DEST` al inicio del script por el destino que te interese monitorizar.
 
 ---
 
 ## Autor y créditos
 
-- **Autor:** Antonio Taboada — [www.hackingyseguridad.com](http://www.hackingyseguridad.com/)
-- **Twitter/X:** [@antonio_taboada](https://twitter.com/antonio_taboada)
-- **Repositorio original:** [github.com/hackingyseguridad/route](https://github.com/hackingyseguridad/route)
+- [www.hackingyseguridad.com](http://www.hackingyseguridad.com/)
+- [@antonio_taboada](https://twitter.com/antonio_taboada)
+- [github.com/hackingyseguridad/route](https://github.com/hackingyseguridad/route)
 - **Temas del repositorio:** `linux`, `router`, `add`, `redes`, `hackingyseguridad`
 
 
